@@ -1,6 +1,23 @@
 import 'package:flutter/material.dart';
-import './features/settings/mainsettings.dart'; // Import halaman yang mau kamu run
+import './features/home/moodlog.dart';
 
 void main() {
-  runApp(const MaterialApp(home: SettingsPage()));
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Mood Tracker',
+      theme: ThemeData(
+        primarySwatch: Colors.pink,
+        fontFamily: 'Arial',
+      ),
+      home: const MoodLogScreen(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
 }
